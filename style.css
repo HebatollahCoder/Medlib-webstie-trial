@@ -1,0 +1,673 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*--------------------main-parent----------*/
+.parent-header{
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(
+              rgba(25, 72, 73, 0.664),
+              rgba(12, 55, 68, 0.75)), url('img/bg-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/*----------------menu-bar-------------*/
+nav{
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+ nav img{
+    width: 152px;
+ }
+
+nav .list-header{
+    display: flex;
+    align-items: center;
+}
+
+nav .list-header ul{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    
+}
+
+nav .list-header ul li{
+    margin: 15px;
+    list-style: none;
+
+}
+
+nav .list-header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding: 15px;
+    background-color: transparent;
+
+}
+
+nav .list-header ul li a:hover{
+    background-color: #10ad986c;
+    padding:15px ;
+}
+/*-----------------------First Content----------------------*/
+.content-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+h1{
+    font-size: 35px;
+    color: white;
+    
+}
+/*--------dont remove it ---------------*/
+p{
+    font-size: 15px;
+    margin: 10px 0px 40px;
+}
+/*------logo middle screen size ----*/
+.content-header img{
+    margin-top: 20px;
+    width: 20%;
+    height: 20%;
+    margin-bottom: 20px;
+}
+
+.content-header p{
+    color: white;
+    font-size: 15px;
+    width: 50%;
+    text-align: center;
+}
+ /*-------appointment button ----*/
+ .content-header a{
+    background-color: #10ad98;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+    padding: 12px 34px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.content-header a:hover{
+    background-color: #11465f;
+}
+
+/*----------building an arrow--------*/
+
+/*---- mobile nav button(won't be shown in large screen)--------*/
+
+nav .mob-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.mob-nav div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px;
+
+
+}
+/*------------screen responsive(hide the mobile nav from the navigation)------------*/ 
+@media(min-width:760px){
+    nav .mob-nav{
+        display: none;
+    
+    }
+
+}
+/*------------mobile responsive------------*/ 
+@media(max-width:760px){
+    h1{
+        font-size: 25px;
+        
+    }
+    .content-header img{
+        margin-top: 20px;
+        width: 35%;
+        height: 35%;
+        padding: 3%;
+    }
+    
+    .content-header p{
+        color: white;
+        font-size: 12px;
+        padding: 3%;
+        width: 70%;
+        text-align: center;}
+
+
+
+    .list-header ul{
+        position: absolute;
+        right:0;
+        height: 100vh;
+        background-color: #11465f;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        width: 50%;
+        transform: translateX(0%);
+        visibility: hidden;
+    }
+
+    .list-header ul li{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .mob-nav{
+        display: block;
+    }
+    
+
+}
+/*-------------------------------- EndOfTheHeaderParentSection------------------------------------*/
+
+
+/*--------------------------------  parent service ----------------------------------------------*/
+.parent-service{
+    background-color:white;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    padding:35px;
+    width: 80%;
+}
+.line{
+    width: 80px;
+    height: 3px;
+    background-color: rgb(250, 210, 34);
+}
+.service-first-col p:nth-of-type(1){
+   font-size: 20px;
+}
+.parent-service p{
+    width: 70%;
+    }
+.parent-service img{
+    width: 50px;
+}
+/*-----Responsive-----*/
+@media(max-width:700px){
+    .parent-service{
+        flex-direction: column;
+        height: fit-content;
+    }
+    
+
+}
+
+/*-------------------------------- End Of parent service- ----------------------------------------------*/
+
+
+/*-------------------------------- parent emergency ----------------------------------------------*/
+.parent-emrg{
+    background-color:white;
+    height: fit-content;
+    
+}
+
+.parent-emrg .full-row{
+    background-color:#0cb8b6 ;
+    color: white;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    padding:35px;
+    width: 80%;
+}
+
+.full-row a{
+    border: 1px solid white;
+    padding: 6px;
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+}
+
+.full-row p{
+    width: 70%;
+}
+.full-row h4{
+    font-size: 20px;
+}
+
+.full-row table{
+    border: 2px solid white;
+    border-collapse: collapse;
+    width: 270px;
+    height: 150px;
+    text-align: center;
+}
+
+.full-row tr{
+    border: 1px solid white;
+    
+}
+/*---responsive---*/
+@media(max-width:700px){
+    .full-row{
+        flex-direction: column;
+        height: fit-content;
+        
+    }
+    .emrg-first-col,.emrg-sec-col{
+        margin-bottom: 16px;
+    }
+
+
+}
+/*-----------------------End Of parent emergency----------------------*/
+
+/*-----------------------parent goals----------------------*/
+.parent-goals{
+    background-color: white;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    padding:35px;
+    width: 80%;
+}
+/*Responsive*/
+@media(max-width:700px){
+    .parent-goals{
+        flex-direction: column;
+        height: fit-content;
+    }
+
+}
+.main-title{
+    color:black;
+    font-size: 20px;
+}
+.parent-goals .sec-title{
+    width: 85%;
+    color: rgb(87, 86, 86);
+}
+.parent-goals h5{
+    font-size: 25px;
+    color: rgb(36, 35, 35);
+    padding-bottom: 15px;
+}   
+
+.knw-more{
+    text-decoration: none;
+    color: #6dd4e9;
+}
+
+/*-----------------------End Of parent Goals----------------------*/
+/*--------------------------Doctors connecting info parent-------------------*/
+.parent-doctor{
+    background-color: white;
+    height: fit-content;
+    margin: auto;
+    padding:35px;
+    width: 80%;
+
+}
+.parent-doctor h5{
+    font-size: 25px;
+    color: rgb(36, 35, 35);
+}
+
+.doc1{
+    border: 1px solid rgb(181, 181, 194);   
+    width: 215px;
+    margin: 0;
+}
+
+.doc1 img{
+    width: 100%;
+    position: relative;
+    
+}
+.content-doc{
+    margin: 15px;
+    line-height: 5px;
+}
+
+.doc-conect-info{
+    display: flex;
+    width: 60px;
+
+
+
+}
+
+.doc1-details p:nth-of-type(1){
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.doc1-details p:nth-of-type(2){
+    font-size: 14px;
+    color: #484c4e;
+}
+
+.doc-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/*----------------- outer spacing responsive ---------------*/
+@media(max-width:700px){
+
+    .doc1 {
+        margin-bottom: 16px;
+    }
+
+
+}
+
+/*-----------------------Doctors connecting info parent----------------------*/
+
+/*-----------------------parent patient----------------------*/
+
+.parent-patient{
+    background-color: #eeeeee;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+
+}
+.parent-content-patient{
+    margin: auto;
+    padding:35px;
+    width: 80%;
+}
+.parent-patient h6{
+    font-size: 25px;
+    color: rgb(36, 35, 35);
+}
+.parent-content-patient .all-patient-syaing{
+    display: flex;
+}
+
+.patient-saying{
+    padding: 20px;
+    
+}
+.patient-saying #said{
+    background-color: white;
+    width: 300px;
+    height: 120px;
+    font-size: 14px;
+    color:#74797c;
+    padding: 10px;
+    filter: drop-shadow(10px 3px 4px #afafb19d);
+}
+
+.patient-info{
+    display: flex;
+    
+}
+
+.patient-info img{
+    width: 50px;
+    height: 50px;
+}
+.patient-info p{
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*----responsive----*/
+@media(max-width:700px){
+    .all-patient-syaing{
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+
+}
+
+/*-----------------------End Of patient parent----------------------*/
+
+
+
+/*-----------------------Doctors connecting info parent----------------------*/
+
+.parent-about{
+    background-color: #29302e;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-about-us{
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    padding:35px;
+    width: 100%;
+
+
+}
+#about-us{
+    color: white;
+    font-size: 23px;
+    width: max-content;
+    margin-left: 20%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#lorem{
+    width: 60%;
+    color: #999999;
+    font-size: 15px;
+    margin-left: 15%;
+}
+
+#healthcare{
+    color: #15b8b6;
+    text-align: right;
+    margin-right: 90px;
+}
+
+/*---------responsive-------------*/
+@media(max-width:700px){
+    #lorem{
+        width: 90%;
+        color: #999999;
+        font-size: 15px;
+        margin-left: 15%;
+    }
+}
+
+/*----------------------------end of about us parent section----------------------------*/
+
+/*----------------------------Contact us  parent section----------------------------*/
+.parent-contact{
+    background-color: #fcfcfc;
+    height: fit-content;
+    margin: auto;
+    padding:35px;
+    width: 80%;
+
+
+}
+.main-con-parent{
+    display: flex;
+}
+.parent-contact #main-con{
+    font-size: 25px;
+}
+/*------col one----*/
+.location-and-more{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+
+}
+.contac-col-one a{
+    font-size: 10px;
+    text-decoration: none;
+    color: #484c4e;
+    align-content: center;
+
+
+
+}
+
+.contac-col-one img{
+    width: 30px;
+    margin-right: 15px;
+    margin-bottom: px;
+
+}
+
+/*------col two----*/
+
+
+.contac-col-two{
+    margin-left: 50px;
+    height: fit-content;
+}
+
+.contac-col-two p{
+    font-weight: bold;
+    font-size: 15px;
+}
+.Contact-section {
+    width: 500px;
+
+
+  }
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 6px;
+  } 
+  input[type=submit] {
+    background-color: #0cb8b6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  } 
+  input[type=submit]:hover {
+    background-color: #325c6a;
+  } 
+
+/*-----Responsive-----*/
+@media(max-width:700px){
+    .main-con-parent{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Contact-section {
+        width: 300px;
+
+        
+    
+      }
+
+}
+
+
+
+/*----------------------- End of contact us section-------------------*/
+
+/*-------------------- start of footer----------------*/
+.parent-footer{
+    background-color: #325c6a;
+    height: fit-content;
+    padding: 0%;
+    margin: 0%;
+
+}
+.Column-styling{
+    margin: auto;
+    padding:35px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+}
+
+.col-one-footer{
+    width: 30%;
+}
+
+
+#main-footer{
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#img-group a img{
+    width: 35px;
+}
+
+/*---------responsive----------*/
+@media(max-width:700px){
+    .Column-styling{
+        margin: auto;
+        padding:35px;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        color: white;
+    }
+    .col-one-footer{
+        width: 50%;
+    }
+    .col-one-footer,.col-two-footer,.col-three-footer{
+        margin-bottom: 16px;
+    }
+    
+}
+
+/*----------------------copyRight----------------*/
+.parent-copyright{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #325c6a;
+}
+
+
+
+                       /*--------------------Bye Bye! See ya next Website---------*/
